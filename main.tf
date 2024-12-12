@@ -25,6 +25,20 @@ resource "aws_s3_bucket_versioning" "mybucket_versioning" {
   }
 }
 
+resource "aws_s3_bucket_lifecycle_configuration" "mybucket_lifecycle" {
+  bucket = aws_s3_bucket.mybucket.id
+
+  rule {
+    id     = "delete-old-versions"
+    status = "Enabled"
+
+    noncurrent_version_expiration {
+      noncurrent_days = 30
+    }
+  }
+}
+
+
 
 
 
