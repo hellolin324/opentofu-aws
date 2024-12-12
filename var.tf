@@ -4,7 +4,7 @@ variable "aws_region" {
 }
 
 variable "bucket_name" {
-  description = "The name of the S3 bucket"
-  type        = string
-  default     = "my-first-s3-bucket-${random_string.bucket_suffix.result}"
+  description = "The base name for the S3 bucket (suffix will be appended)"
+  default     = "my-first-s3-bucket"
 }
+
