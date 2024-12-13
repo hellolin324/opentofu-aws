@@ -1,5 +1,6 @@
 # Ignore Terraform working directory
 .terraform/
+terraform.tfstate
 
 # Ignore Terraform plan files
 *.tfplan
@@ -26,3 +27,7 @@ crash.log
 .idea/
 .vscode/
 *.iml
+
+
+
+
