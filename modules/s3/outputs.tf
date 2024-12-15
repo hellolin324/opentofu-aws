@@ -1,3 +1,3 @@
 output "bucket_name" {
-  value = local.computed_bucket_name
+  value = aws_s3_bucket.mybucket.bucket
 }
